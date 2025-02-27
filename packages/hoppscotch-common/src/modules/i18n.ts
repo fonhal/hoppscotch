@@ -11,7 +11,7 @@ import { throwError } from "~/helpers/functional/error"
 import { PersistenceService } from "~/services/persistence"
 import { getService } from "./dioc"
 
-import FALLBACK_LANG_MESSAGES from "../../locales/en.json"
+import FALLBACK_LANG_MESSAGES from "../../locales/cn.json"
 
 /*
   In context of this file, we have 2 main kinds of things.
@@ -45,7 +45,7 @@ type LanguagesDef = {
   dir?: "ltr" | "rtl" // Text Orientation (defaults to 'ltr')
 }
 
-const FALLBACK_LANG_CODE = "en"
+const FALLBACK_LANG_CODE = "cn"
 
 const persistenceService = getService(PersistenceService)
 
@@ -136,8 +136,8 @@ export function getI18n() {
 export default <HoppModule>{
   onVueAppInit(app) {
     const i18n = createI18n(<I18nOptions>{
-      locale: "en", // TODO: i18n system!
-      fallbackLocale: "en",
+      locale: "cn", // TODO: i18n system!
+      fallbackLocale: "cn",
       legacy: false,
       allowComposition: true,
     })
